@@ -1,13 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
 <title>New Media Union</title>
+<meta name="New Media programs at TMU Student Union" content="Resources and community space for the New Media students and Toronto Metropolitan University">
 <link rel="icon" type="image/x-icon" href="/Images/favicon.ico"> <!-- Add a favicon for the website -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-
 * {
   box-sizing: border-box;
 }
@@ -17,17 +15,11 @@ body {
   margin: 0;
 }
 
-/* Header */
-header {
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
 p{
   padding-left: 10px;
   padding-right: 10px;
+  color: black;
+  font-size: medium;
 }
 
 h1{
@@ -35,17 +27,23 @@ h1{
   padding-top: 20px;
   font-weight: bold;
   font-size: medium;
+  color:white;
 }
+
+
+
 
 /* Header */
 header {
-  padding: 60px;
+  padding: 40px;
   text-align: center;
-  background: #1abc9c;
-  color: white;
-  font-size: 30px;
+  background: #fcf4df;
+  color: #ee9437;
+  font-size: 50px;
   font-weight: bold;
 }
+
+
 
 /* Top navigation bar */
 .navbar {
@@ -68,15 +66,15 @@ header {
 }
 
 .dropdown {
-  position: relative;
-  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  margin-top: 14px;
+  margin-top: 46.5px;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -97,6 +95,44 @@ header {
 }
 
 
+/* THE PARENT CONTAINER */
+.social-container {
+  display: flex;            /* Activates horizontal row layout */
+  
+  flex-direction: row;      /* Locks items onto a horizontal axis line */
+  align-items: center;      /* Lines up the horizontal midpoints of both icons */
+  gap: 20px;                /* Puts clean horizontal space between them */
+}
+
+.image-button {
+      
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      gap: 20px;     /* Defines the space between the two buttons */
+      
+    }
+
+    /* Slight zoom and full brightness on hover */
+    .image-button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    /* Removes default blue/purple border around linked images in older browsers */
+    .image-button img {
+      border: none;
+      display: block;      
+    }
+
+    /* Sizing individual images cleanly in CSS */
+.social-container .image-button:nth-child(1) img {
+  width: 100px;             /* Target Discord width */
+}
+
+.social-container .image-button:nth-child(2) img {
+  width: 80px;              /* Target Instagram width */
+}
+
+
 
 /* Column container */
 .container {  
@@ -107,7 +143,7 @@ header {
 /* Sidebar/left column */
 .side {
   flex: 30%;
-  background-color: #f1f1f1;
+  background-color: #ee9437;
   padding: 20px;
 }
 
@@ -127,15 +163,13 @@ footer {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .container, .navbar {   
+  .container, .navbar, .dropdown, .dropdown-content, .dropdown:hover {   
     flex-direction: column;
   }
 }
-
-
 </style>
-
 </head>
+
 
 
 <body>
@@ -144,7 +178,7 @@ footer {
   
     <!-- Header -->
 <header>
-  Discussion Board
+  Arduino Discussion Archives
 </header>
 
 <!-- Navigation Bar -->
@@ -176,23 +210,6 @@ footer {
 
 </main>
 
-<section id="comments">
-<script src="https://giscus.app/client.js"
-        data-repo="Mars4TheStars/New-Media-Union"
-        data-repo-id="R_kgDOTa41Xw"
-        data-category="Announcements"
-        data-category-id="DIC_kwDOTa41X84DBWcd"
-        data-mapping="pathname"
-        data-strict="0"
-        data-reactions-enabled="1"
-        data-emit-metadata="0"
-        data-input-position="bottom"
-        data-theme="preferred_color_scheme"
-        data-lang="en"
-        crossorigin="anonymous"
-        async>
-</script>
-</section>
 
 </body>
 

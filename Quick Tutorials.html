@@ -66,15 +66,15 @@ header {
 }
 
 .dropdown {
-  position: relative;
-  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 .dropdown-content {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  margin-top: 14px;
+  margin-top: 46.5px;
   min-width: 200px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 }
@@ -93,6 +93,48 @@ header {
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+
+/* THE PARENT CONTAINER */
+.social-container {
+  display: flex;            /* Activates horizontal row layout */
+  
+  flex-direction: row;      /* Locks items onto a horizontal axis line */
+  align-items: center;      /* Lines up the horizontal midpoints of both icons */
+  gap: 20px;                /* Puts clean horizontal space between them */
+}
+
+.image-button {
+      
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      gap: 20px;     /* Defines the space between the two buttons */
+      
+    }
+
+    /* Slight zoom and full brightness on hover */
+    .image-button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
+
+    /* Removes default blue/purple border around linked images in older browsers */
+    .image-button img {
+      border: none;
+      display: block;      
+    }
+
+    /* Sizing individual images cleanly in CSS */
+.social-container .image-button:nth-child(1) img {
+  width: 100px;             /* Target Discord width */
+}
+
+.social-container .image-button:nth-child(2) img {
+  width: 80px;              /* Target Instagram width */
+}
+
+
+
 
 /* Column container */
 .container {  
@@ -180,6 +222,12 @@ footer {
 <p> - Set lined to be "linear engraved" to "Blue" (0, 0, 255).</p>
 
 <p> - Set shapes to be rastered to have fill a "Black" (0, 0, 0).</p>
+
+<br>
+
+<p>Here's a template: </p>
+<a href="Resources/New Media - Laser Cut Template.ai" class="image-button">
+      <img src="Images/download-button-on-transparent-background-free-png.webp" alt="New Media-Laser Cut Template" width="100px"></a>
 
 <br>
 

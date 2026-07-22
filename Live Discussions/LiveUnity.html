@@ -1,13 +1,10 @@
 <html>
 <head>
 <title>New Media Union</title>
+<meta name="New Media programs at TMU Student Union" content="Resources and community space for the New Media students and Toronto Metropolitan University">
 <link rel="icon" type="image/x-icon" href="/Images/favicon.ico"> <!-- Add a favicon for the website -->
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
-
-
-
 <style>
 * {
   box-sizing: border-box;
@@ -18,17 +15,11 @@ body {
   margin: 0;
 }
 
-/* Header */
-header {
-  padding: 60px;
-  text-align: center;
-  background: #1abc9c;
-  color: white;
-}
-
 p{
   padding-left: 10px;
   padding-right: 10px;
+  color: black;
+  font-size: medium;
 }
 
 h1{
@@ -36,7 +27,11 @@ h1{
   padding-top: 20px;
   font-weight: bold;
   font-size: medium;
+  color:white;
 }
+
+
+
 
 /* Header */
 header {
@@ -47,6 +42,7 @@ header {
   font-size: 50px;
   font-weight: bold;
 }
+
 
 
 /* Top navigation bar */
@@ -99,9 +95,42 @@ header {
 }
 
 
+/* THE PARENT CONTAINER */
+.social-container {
+  display: flex;            /* Activates horizontal row layout */
+  
+  flex-direction: row;      /* Locks items onto a horizontal axis line */
+  align-items: center;      /* Lines up the horizontal midpoints of both icons */
+  gap: 20px;                /* Puts clean horizontal space between them */
+}
 
+.image-button {
+      
+      transition: transform 0.2s ease, opacity 0.2s ease;
+      gap: 20px;     /* Defines the space between the two buttons */
+      
+    }
 
+    /* Slight zoom and full brightness on hover */
+    .image-button:hover {
+      transform: scale(1.05);
+      opacity: 0.9;
+    }
 
+    /* Removes default blue/purple border around linked images in older browsers */
+    .image-button img {
+      border: none;
+      display: block;      
+    }
+
+    /* Sizing individual images cleanly in CSS */
+.social-container .image-button:nth-child(1) img {
+  width: 100px;             /* Target Discord width */
+}
+
+.social-container .image-button:nth-child(2) img {
+  width: 80px;              /* Target Instagram width */
+}
 
 
 
@@ -114,7 +143,7 @@ header {
 /* Sidebar/left column */
 .side {
   flex: 30%;
-  background-color: #f1f1f1;
+  background-color: #ee9437;
   padding: 20px;
 }
 
@@ -125,8 +154,6 @@ header {
   padding: 20px;
 }
 
-
-
 /* Footer */
 footer {
   padding: 20px;
@@ -136,7 +163,7 @@ footer {
 
 /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 700px) {
-  .container, .navbar {   
+  .container, .navbar, .dropdown, .dropdown-content, .dropdown:hover {   
     flex-direction: column;
   }
 }
@@ -144,12 +171,13 @@ footer {
 </head>
 <body>
 
-      <!-- Header -->
-<header>
-  General Events
- 
-</header>
 
+
+<!-- Header -->
+<header>
+  New Media Union
+  <p>For a community of<b> Makers and Artists</b></p>
+</header>
 
 <!-- Navigation Bar -->
 <div class="navbar">
@@ -199,16 +227,57 @@ footer {
 </div>
 
 
-<h1> Google Calendar for TMU Events</h1>
 
-<br>
-<iframe src="https://calendar.google.com/calendar/embed?src=c_cebcda906d9844faa92e46d6f8d9ffda51af9bf1ca6516260e3270bd6fc52b21%40group.calendar.google.com&ctz=America%2FToronto" 
-style="border: 50px" width="100%" height="50%" frameborder="0" scrolling="no" margin-top="100px"></iframe>
+  
 
 
- <!-- Footer -->
+<!-- Content Container -->
+<div class="container">
+  <div class="side">
+    <h2>More for the New Media student</h2>
+
+<div class="social-container">
+    <a href="https://discord.com/channels/@me/1522375775498539122/1528130744831053954" class="image-button">
+      <img src="Images/Discord.png" alt="New Media Official Discord"></a>
+
+    <a href="https://www.instagram.com/newmediacourseunion?igsh=MTFpMjlwb2Jrdmpzbg==" class="image-button">
+      <img src="Images/instagram-icon.png" alt="New Media Official Instagram"></a>
+ 
+   </div> 
+</div>
+    
+ 
+  <div class="main">
+    <section id="comments">
+<script src="https://giscus.app/client.js"
+        data-repo="Mars4TheStars/New-Media-Union"
+        data-repo-id="R_kgDOTa41Xw"
+        data-category="Unity"
+        data-category-id="DIC_kwDOTa41X84DBWcd"
+        data-mapping="pathname"
+        data-strict="0"
+        data-reactions-enabled="1"
+        data-emit-metadata="0"
+        data-input-position="bottom"
+        data-theme="gruvbox_light"
+        data-lang="en"
+        crossorigin="anonymous"
+        async>
+</script>
+</section>
+</div>
+</div>
+
+
+<!-- Footer -->
 <footer>
   New Media Union &copy; 2027
 </footer>
 
+
 </body>
+
+
+
+
+</html>
